@@ -1,1 +1,1 @@
-# Chaintune-Aptos
+# Chaintune-Music-Platform

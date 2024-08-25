@@ -1,0 +1,30 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    /* cursor: ew-resize; */
+
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    opacity: 0;
+    /* background: linear-gradient(89.84deg, #9C3BE6 0.85%, #E78B3C 99.88%),
+  linear-gradient(0deg, #FFFFFF, #FFFFFF); */
+    border: 8px solid #FFFFFF;
+    background-color: white;
+    color: white;
+    -webkit-transition: .5s;
+    /* 0.2 seconds transition on hover */
+    transition: opacity .5s;
+
+}
+
+input[type=range]:hover::-webkit-slider-thumb {
+    opacity: 1;
+    background-color: white;
+
+    /* cursor: ew-resize; */
+}
