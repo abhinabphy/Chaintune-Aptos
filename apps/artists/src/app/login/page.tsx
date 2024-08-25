@@ -3,6 +3,7 @@
 
 import { useState } from "react";
 import { WalletManager } from "@/utils/connect_wallet";
+import { useRouter } from 'next/navigation';
 
 const walletManager = new WalletManager();
 
@@ -10,13 +11,18 @@ const Login = () => {
   const [isConnected, setIsConnected] = useState<boolean>(
     walletManager.isWalletConnected()
   );
+  const router = useRouter();
+  
+  const handleLoginClick = () => {
+    router.push('/dashboard');
+  };
   const handleConnectWallet = async () => {
     const connected: boolean = await walletManager.connectWallet();
     if (connected) {
       console.log("Wallet connected successfully");
       setIsConnected(true);
     } else {
-      console.log("Failed to connect to the wallet");
+      console.log("Failed to connect to the wallets");
     }
   };
   return (
@@ -63,7 +69,8 @@ const Login = () => {
           </button>
         </div>
         <div className="w-[35vw] border-solid border-white/6 backdrop-blur-[24px] bg-[linear-gradient(#ffffff,_#ffffff),_linear-gradient(159deg,_rgba(28,_30,_34,_0.33)_-9%,rgba(31,_34,_40,_0.5)_113%)] bg-cover,_cover bg-50%_50%,_50%_50% bg-blend-normal,_normal bg-repeat-no-repeat,_no-repeat flex flex-row justify-center pt-3 h-12 items-start border rounded-[24px]">
-          <div className="text-sm font-['Aileron'] leading-[20px]">Login</div>
+          <button className="text-sm font-['Aileron'] leading-[20px]" onClick={handleLoginClick} >
+            Login</button>
         </div>
       </div>
     </div>

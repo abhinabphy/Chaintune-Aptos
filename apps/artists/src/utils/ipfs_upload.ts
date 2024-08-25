@@ -1,10 +1,11 @@
 import axios, { AxiosResponse } from 'axios';
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 export default class IPFSManager {
 
   
     public async handleUploadToIPFS(file: File, uploadType: string) {
-
+    
       const formData = new FormData();
       formData.append('file', file);
   
@@ -19,20 +20,34 @@ export default class IPFSManager {
       formData.append('pinataOptions', options);
   
       try {
-        const resFile = await axios.post(
-          'https://api.pinata.cloud/pinning/pinFileToIPFS',
-          formData,
-          {
-            maxBodyLength: Infinity,
-            headers: {
-              'Content-Type': 'multipart/form-data',
-              Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJiMDIxYWI0Ny1lNzdiLTRmOTktOThjNC1mOTYxN2JjMmU0MzYiLCJlbWFpbCI6ImFiaGluYWJpaXRnQGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJwaW5fcG9saWN5Ijp7InJlZ2lvbnMiOlt7ImRlc2lyZWRSZXBsaWNhdGlvbkNvdW50IjoxLCJpZCI6IkZSQTEifSx7ImRlc2lyZWRSZXBsaWNhdGlvbkNvdW50IjoxLCJpZCI6Ik5ZQzEifV0sInZlcnNpb24iOjF9LCJtZmFfZW5hYmxlZCI6ZmFsc2UsInN0YXR1cyI6IkFDVElWRSJ9LCJhdXRoZW50aWNhdGlvblR5cGUiOiJzY29wZWRLZXkiLCJzY29wZWRLZXlLZXkiOiIxOWUyMjYyZTk3MmMxNjk2MTAzMiIsInNjb3BlZEtleVNlY3JldCI6IjlhZmExMmVlYjM5MDIzY2VjMTllMmI0MWE0M2U3ZjI0ZDcxOWRhZDc5ZjI1NGI1OGUxYTM3ODVlNTc0NWE1MjUiLCJleHAiOjE3NTYwMjAyNDd9.kuFtbjmgGbE8dw-mZZ3FVJJoXEZF5irPN0CYF4HDDDg `,
-            },
-          }
-        );
+        // const resFile = await axios.post(
+        //   'https://api.pinata.cloud/pinning/pinFileToIPFS',
+        //   formData,
+        //   {
+        //     maxBodyLength: Infinity,
+        //     headers: {
+        //       'Content-Type': 'multipart/form-data',
+        //       Authorization: `Bearer ${PINATA_API_KEY}`,
+        //     },
+        //   }
+        // );
   
-        console.log(resFile.data.IpfsHash);
-        return resFile.data.IpfsHash;  
+        // console.log(resFile.data.IpfsHash);
+        // return resFile.data.IpfsHash;  
+        
+    const request = await fetch(
+      "https://api.pinata.cloud/pinning/pinFileToIPFS",
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJjMTZiOTFjZC00Yzk2LTQ0YmQtYjQ5OC1hNDMyMzA0OWIxYzciLCJlbWFpbCI6ImFtYW5ndXB0YTQzMjAwNUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGluX3BvbGljeSI6eyJyZWdpb25zIjpbeyJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MSwiaWQiOiJGUkExIn0seyJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MSwiaWQiOiJOWUMxIn1dLCJ2ZXJzaW9uIjoxfSwibWZhX2VuYWJsZWQiOmZhbHNlLCJzdGF0dXMiOiJBQ1RJVkUifSwiYXV0aGVudGljYXRpb25UeXBlIjoic2NvcGVkS2V5Iiwic2NvcGVkS2V5S2V5IjoiNWZhNDJiM2Q4ZWFmNWYzYmZjNTYiLCJzY29wZWRLZXlTZWNyZXQiOiJhNzU4ZmRmYjU0MDA2NzYzYTExMzY1MmI2MzE0YWYyYzA2OTA3MTExNGY4OGRiZjA2YmM0ZGEwMDgxOTJhOGY2IiwiZXhwIjoxNzU2MTUxNjYwfQ.WTRdDtvwS12bGVVuWtKea7IBGsdmdV-uuzxxyD9zmD8`,
+        },
+        body: formData,
+      }
+    );
+    const response = await request.json();
+    console.log(response);
+    return response.IpfsHash;
       } catch (error) {
         console.log('Error: ', error);
       }
