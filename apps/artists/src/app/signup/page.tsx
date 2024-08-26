@@ -85,9 +85,9 @@ const Signup = () => {
         type_arguments: [],
         arguments: [
           textEncoder.encode(state.name),
-          textEncoder.encode(`ipfs://${ipfshash}`),
+          textEncoder.encode(`${ipfshash}`),
           textEncoder.encode(state.desc),
-          textEncoder.encode(`ipfs://${profileCid}`),
+          textEncoder.encode(`https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/${profileCid}`),
         ],
       };
       const pendingTransaction = await (
@@ -129,20 +129,17 @@ const Signup = () => {
     console.log(data);
 
     try {
-      await axios
-        .post(`${origin}/api/artist/new`, data, config)
+     
     
-        .then(async (response) => {
-          await mintNFT(response.data).then(() => {
+        
+          await mintNFT(data.imgCid).then(() => {
             console.log(`The new artist is successfully registered`);
-            console.log(response.data);
+            // console.log(response.data);
             redirectOnVerification();
             console.log('Redirecting to dashboard');
           });
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+        
+        
     } catch (error) {
       console.log(error);
     }

@@ -60,7 +60,7 @@ const playSong = () => {
   const [currentSong, setCurrentSong] = useState(0);
   const [title, setTitle] = useState("first");
   const [src, setSrc] = useState(
-    "https://ipfs.io/ipfs/QmWMhDYHBnBWZL37zavxgwvyQ1m6FYS9ZHBDTcgaDBfiKW"
+    "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt"
   );
   const [artist, setArtist] = useState("artist");
   const [img, setImg] = useState("https://svgshare.com/i/10xc.svg");
@@ -91,7 +91,7 @@ const playSong = () => {
         {
           name: "Lazarus",
           animation_url:
-            "https://ipfs.io/ipfs/QmWMhDYHBnBWZL37zavxgwvyQ1m6FYS9ZHBDTcgaDBfiKW",
+            "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt",
           image: "https://svgshare.com/i/10xH.svg",
           attributes: [
             {
@@ -144,7 +144,7 @@ const playSong = () => {
         {
           name: "Lazarus",
           animation_url:
-            "https://ipfs.io/ipfs/QmWMhDYHBnBWZL37zavxgwvyQ1m6FYS9ZHBDTcgaDBfiKW",
+            "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt",
           image: "https://svgshare.com/i/10xH.svg",
           attributes: [
             {
@@ -449,7 +449,7 @@ const playSong = () => {
                   <IconContext.Provider value={{ style: { fontSize: "20px" } }}>
                     {/* <FaPlay /> */}
                     <audio ref={audioRef} controls style={{ display: "none" }}>
-                      {/* <source src={`https://ipfs.io/ipfs/${cid}`} type="audio/mp3" /> */}
+                       <source src={`https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/${cid}`} type="audio/mp3" /> 
                       <source src={src} type="audio/mp3" />
                     </audio>
 

@@ -386,6 +386,7 @@ const TrackDetails: React.FC<TrackDetailsProps> = (props) => {
         );
 
         console.log(resFile.data);
+        return resFile.data.IpfsHash;
         if (type === "SongAudio") {
           setaudioCid(resFile.data.IpfsHash);
         } else if (type === "SongImage") {
