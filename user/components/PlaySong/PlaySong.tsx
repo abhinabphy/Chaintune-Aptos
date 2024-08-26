@@ -1,3 +1,4 @@
+//@ts-nocheck
 "use client";
 
 import React from "react";
@@ -60,7 +61,7 @@ const playSong = () => {
   const [currentSong, setCurrentSong] = useState(0);
   const [title, setTitle] = useState("first");
   const [src, setSrc] = useState(
-    "https://ipfs.io/ipfs/QmWMhDYHBnBWZL37zavxgwvyQ1m6FYS9ZHBDTcgaDBfiKW"
+    "https://ipfs.io/ipfs/QmbELq2VqdwK41XK4bnKpxkcx2NVHrsu7zgof3Wnnbf3LR"
   );
   const [artist, setArtist] = useState("artist");
   const [img, setImg] = useState("https://svgshare.com/i/10xc.svg");
@@ -79,6 +80,14 @@ const playSong = () => {
       console.log(data.songs);
       setTracks(data.songs);
     };
+    const ipfsGateway = "https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/";
+const cid = "QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt";//https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/QmbELq2VqdwK41XK4bnKpxkcx2NVHrsu7zgof3Wnnbf3LR
+const fileName = "audio_file.mp3";
+const ipfsPath = `${cid}`;
+
+
+
+const audioSource = `${ipfsGateway}${ipfsPath}`;
 
     if (params) getAlbumDetails();
     else {
@@ -91,7 +100,7 @@ const playSong = () => {
         {
           name: "Lazarus",
           animation_url:
-            "https://ipfs.io/ipfs/QmWMhDYHBnBWZL37zavxgwvyQ1m6FYS9ZHBDTcgaDBfiKW",
+            "https://ipfs.io/ipfs/QmbELq2VqdwK41XK4bnKpxkcx2NVHrsu7zgof3Wnnbf3LR",
           image: "https://svgshare.com/i/10xH.svg",
           attributes: [
             {
@@ -144,7 +153,7 @@ const playSong = () => {
         {
           name: "Lazarus",
           animation_url:
-            "https://ipfs.io/ipfs/QmWMhDYHBnBWZL37zavxgwvyQ1m6FYS9ZHBDTcgaDBfiKW",
+            "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt",
           image: "https://svgshare.com/i/10xH.svg",
           attributes: [
             {
@@ -318,15 +327,15 @@ const playSong = () => {
   //     setIsPlaying(false);
   // }, [cid]);
 
-  // const handleVolumeChange = (e) => {
-  //     if (audioRef.current) {
-  //         const newVolume = parseFloat(e.target.value);
-  //         setVolume(newVolume);
-  //         audioRef.current.volume = newVolume;
-  //         setvolvalue(e.target.value);
-  //     }
+  const handleVolumeChange = (e) => {
+      if (audioRef.current) {
+          const newVolume = parseFloat(e.target.value);
+          setVolume(newVolume);
+          audioRef.current.volume = newVolume;
+          setvolvalue(e.target.value);
+      }
 
-  // };
+  };
 
   const updateProgress = () => {
     if (audioRef.current) {
@@ -447,10 +456,10 @@ const playSong = () => {
 
                 <PlayPauseButton onClick={togglePlayPause}>
                   <IconContext.Provider value={{ style: { fontSize: "20px" } }}>
-                    {/* <FaPlay /> */}
+                    <FaPlay />
                     <audio ref={audioRef} controls style={{ display: "none" }}>
-                      {/* <source src={`https://ipfs.io/ipfs/${cid}`} type="audio/mp3" /> */}
-                      <source src={src} type="audio/mp3" />
+                      <source src={audioSource} type="audio/mp3" />
+                    
                     </audio>
 
                     <div>
