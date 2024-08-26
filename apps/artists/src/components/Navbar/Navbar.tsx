@@ -56,6 +56,14 @@ const Navbar = () => {
           >
             Dashboard
           </a>
+          <a
+            href="/convert"
+            className={`text-4xl font-['Aileron'] font-light leading-[48px] text-white ${
+              pathname === "/dashboard" ? "opacity-100" : "opacity-30"
+            } cursor-pointer`}
+          >
+            Convert
+          </a>
           <img
             src="https://file.rendit.io/n/0qOa1cpotCzSOnIbUhn0.svg"
             alt="Search"
