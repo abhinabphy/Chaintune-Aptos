@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@aptos-labs/wallet-adapter-react": "^2.1.2",
-    "@types/node": "20.10.3",
+    "@types/node": "22.5.0",
     "@types/react": "18.2.41",
     "@types/react-dom": "18.2.17",
     "@walletconnect/web3-provider": "^1.8.0",
