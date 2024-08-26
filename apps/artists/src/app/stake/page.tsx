@@ -154,7 +154,6 @@ const Staking_page = () => {
             </button>
           ) : (
             
-            <>
             <button
               className="text-lg font-['Aileron'] leading-[20px] pb-4 "
               onClick={handleStakeAmount}
@@ -162,10 +161,10 @@ const Staking_page = () => {
               Stake and Continue
             </button>
            
-          </>
-           
           )}
         </div>
+        <a href="/convert" className="text-lg font-['Aileron'] leading-[20px] pb-4 text-white">Convert to Aptos</a>
+
       </div>
     </div>
   );
