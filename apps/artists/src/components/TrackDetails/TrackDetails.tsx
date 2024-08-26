@@ -249,7 +249,7 @@ const TrackDetails: React.FC<TrackDetailsProps> = (props) => {
       handleUploadToIPFS(song, "SongAudio");
       handleUploadToIPFS(musicCoverFile, "SongImage");
       alert("Song Uploaded");
-      window.location.replace("http://localhost:3001/manageRelease");
+      window.location.replace("http://localhost:3000/manageRelease");
     }
     setTrackName("");
     setMusicDescription("");
