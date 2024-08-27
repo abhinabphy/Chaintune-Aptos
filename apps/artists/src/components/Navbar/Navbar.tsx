@@ -17,6 +17,8 @@ const Navbar = () => {
     localStorage.removeItem("isStaked");
     router.push("/stake");
   };
+  const profileCid = localStorage.getItem("profileCid");
+const imageUrl = `https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/${profileCid}`;
 
   return (
     <div className="flex bg-zinc-950 py-[1.5vw] px-[1.5vw] fixed z-10 flex-row justify-between w-full items-center">
@@ -141,7 +143,7 @@ const Navbar = () => {
             </div>
           </div>
           <img
-            src="https://file.rendit.io/n/8318G9zIkHzBWGQcx4qy.svg"
+            src={imageUrl}
             alt="Ellipse"
             id="Ellipse"
             className="w-12"

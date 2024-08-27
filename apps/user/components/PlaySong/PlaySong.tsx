@@ -79,7 +79,7 @@ const playSong = () => {
       console.log(data.songs);
       setTracks(data.songs);
     };
-
+ 
     if (params) getAlbumDetails();
     else {
       setTracks([
@@ -194,6 +194,7 @@ const playSong = () => {
   // State
   const [trackIndex, setTrackIndex] = useState(2);
   // const [trackProgress, setTrackProgress] = useState(0);
+
 
   const toPrevTrack = () => {
     if (trackIndex - 1 < 0) {
@@ -326,7 +327,8 @@ const playSong = () => {
   //         setvolvalue(e.target.value);
   //     }
 
-  // };
+  // // };
+  // const cid=
 
   const updateProgress = () => {
     if (audioRef.current) {
@@ -446,11 +448,14 @@ const playSong = () => {
                 </ControlButton>
 
                 <PlayPauseButton onClick={togglePlayPause}>
+
                   <IconContext.Provider value={{ style: { fontSize: "20px" } }}>
                     {/* <FaPlay /> */}
                     <audio ref={audioRef} controls style={{ display: "none" }}>
-                       <source src={`https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/${cid}`} type="audio/mp3" /> 
-                      <source src={src} type="audio/mp3" />
+                  
+                      setSrc(newsrc);
+                       <source src={src} type="audio/mp3" /> 
+                      {/* <source src={src} type="audio/mp3" /> */}
                     </audio>
 
                     <div>
