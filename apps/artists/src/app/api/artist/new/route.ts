@@ -1,7 +1,7 @@
 import mongooseconnect from "@/lib/mongoose";
 import { Artist } from "@/models/artist";
 import pinataSDK from "@pinata/sdk";
-const pinata = new pinataSDK({ pinataJWTKey: process.env.NEXT_PUBLIC_JWT });
+const pinata = new pinataSDK({ pinataJWTKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySW5mb3JtYXRpb24iOnsiaWQiOiJjMTZiOTFjZC00Yzk2LTQ0YmQtYjQ5OC1hNDMyMzA0OWIxYzciLCJlbWFpbCI6ImFtYW5ndXB0YTQzMjAwNUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicGluX3BvbGljeSI6eyJyZWdpb25zIjpbeyJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MSwiaWQiOiJGUkExIn0seyJkZXNpcmVkUmVwbGljYXRpb25Db3VudCI6MSwiaWQiOiJOWUMxIn1dLCJ2ZXJzaW9uIjoxfSwibWZhX2VuYWJsZWQiOmZhbHNlLCJzdGF0dXMiOiJBQ1RJVkUifSwiYXV0aGVudGljYXRpb25UeXBlIjoic2NvcGVkS2V5Iiwic2NvcGVkS2V5S2V5IjoiNWZhNDJiM2Q4ZWFmNWYzYmZjNTYiLCJzY29wZWRLZXlTZWNyZXQiOiJhNzU4ZmRmYjU0MDA2NzYzYTExMzY1MmI2MzE0YWYyYzA2OTA3MTExNGY4OGRiZjA2YmM0ZGEwMDgxOTJhOGY2IiwiZXhwIjoxNzU2MTUxNjYwfQ.WTRdDtvwS12bGVVuWtKea7IBGsdmdV-uuzxxyD9zmD8" });
 
 export const POST = async (req: Request) => {
   const { name, desc, walletAddress,imageCid } = await req.json();
@@ -54,7 +54,7 @@ export const POST = async (req: Request) => {
         category: "Collection",
       },
     };
-
+    console.log("Hello");
     console.log("Uploading file to IPFS...")
     const options = {
         pinataMetadata: {

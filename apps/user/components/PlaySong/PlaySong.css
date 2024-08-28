@@ -1,30 +1,75 @@
-::-webkit-scrollbar {
-    display: none;
-}
-
-input[type=range]::-webkit-slider-thumb {
-    /* cursor: ew-resize; */
-
-    -webkit-appearance: none;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-
-    opacity: 0;
-    /* background: linear-gradient(89.84deg, #9C3BE6 0.85%, #E78B3C 99.88%),
-  linear-gradient(0deg, #FFFFFF, #FFFFFF); */
-    border: 8px solid #FFFFFF;
-    background-color: white;
-    color: white;
-    -webkit-transition: .5s;
-    /* 0.2 seconds transition on hover */
-    transition: opacity .5s;
-
-}
-
-input[type=range]:hover::-webkit-slider-thumb {
-    opacity: 1;
-    background-color: white;
-
-    /* cursor: ew-resize; */
-}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+  }
+  
+  .currentTrack {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .albumArt {
+    border-radius: 8px;
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+  }
+  
+  .trackInfo {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .artist {
+    font-size: 18px;
+    color: #555;
+    margin: 5px 0;
+  }
+  
+  .playPauseButton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0070f3;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .playPauseButton:hover {
+    background-color: #005bb5;
+  }
+  
+  .audioPlayer {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  .trackList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .trackImage {
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .trackImage:hover {
+    transform: scale(1.1);
+  }
+  
