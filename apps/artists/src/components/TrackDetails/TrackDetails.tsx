@@ -362,6 +362,7 @@ const TrackDetails: React.FC<TrackDetailsProps> = (props) => {
       formData.append("file", file as Blob);
 
       const metadata = JSON.stringify({
+        // eslint-disable-line
         name: `${file.name}`, // eslint-disable-line
       });
       formData.append("pinataMetadata", metadata);

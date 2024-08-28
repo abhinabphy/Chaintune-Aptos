@@ -19,7 +19,7 @@ import { Network, Provider } from "aptos";
 import { min } from "date-fns";
 
 const mintingModuleAddress =
-  "0x79e58a8f48de8bfafc8c7c5eca3d21facddfa12d51727b611afa0e6f4df56ea9";
+  "0x28aa30842a262ce44a3734fd8b8b2e3238fc574970ce5bce384e1510a9f85f2b";
 const moduleAddress = `0xa715798c513b5af39165b04969c3c502fedc5da1dd3b64cbfc68573368ba3c9b`;
 const provider = new Provider(Network.DEVNET);
 
@@ -80,8 +80,9 @@ const Signup = () => {
 
       const textEncoder = new TextEncoder();
       
-      textEncoder.encode(`https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/${ipfshash}`);
-      localStorage.setItem("profileCid", ipfshash);
+      // textEncoder.encode(`https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/${ipfshash}`);
+      console.log(ipfshash);
+      // localStorage.setItem("profileCid", ipfshash);
       const payload = {
         type: "entry_function_payload",
         function: `${mintingModuleAddress}::Marketplace::mint_profile_nft`,
@@ -89,8 +90,9 @@ const Signup = () => {
         arguments: [
           textEncoder.encode(state.name),
           textEncoder.encode(`https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/${ipfshash}`),
+               
           textEncoder.encode(state.desc),
-          textEncoder.encode(`https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/${profileCid}`),
+          textEncoder.encode(`https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/${ipfshash}`),
         ],
       };
       const pendingTransaction = await (
@@ -113,28 +115,29 @@ const Signup = () => {
   
   const RegisterArtist = async (e: any) => {
     e.preventDefault();
-    await artistRevenue.initializeSponsor();
-     await artistRevenue.AddArtist();
-     
-    const data = {
-      ...state,
-      walletAddress: walletManager.getAddress(),
-      imageCid: profileCid,
-    };
-    console.log(data);
-    const config = {
-      headers: {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-        "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
-      },
-    };
-    console.log(data);
+   
 
     try {
+      await artistRevenue.initializeSponsor();
+      await artistRevenue.AddArtist();
+      
+     const data = {
+       ...state,
+       walletAddress: walletManager.getAddress(),
+       imageCid: profileCid,
+     };
+     console.log(data);
+     const config = {
+       headers: {
+         "Content-Type": "application/json",
+         "Access-Control-Allow-Origin": "*",
+         "Access-Control-Allow-Methods": "GET,PUT,POST,DELETE,PATCH,OPTIONS",
+       },
+     };
+     console.log(data);
      
-    
-        
+      // localStorage.removeItem("profileCid");
+        console.log(data.imageCid);
           await mintNFT(data.imageCid).then(() => {
             console.log(`The new artist is successfully registered`);
             // console.log(response.data);
@@ -149,6 +152,7 @@ const Signup = () => {
   };
 
   const redirectOnVerification = () => {
+    console.log('Redirecting to dashboard  kar raha hai');
     router.push("/dashboard");
   }
 

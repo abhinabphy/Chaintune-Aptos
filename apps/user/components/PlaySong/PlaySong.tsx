@@ -58,11 +58,11 @@ const playSong = () => {
   const [timesec, setsec] = useState<string | null>("00");
   const [Ismute, setIsmte] = useState<boolean>(true);
   const [currentSong, setCurrentSong] = useState(0);
-  const [title, setTitle] = useState("first");
+  const [title, setTitle] = useState("Fatafati Football");
   const [src, setSrc] = useState(
     "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt"
   );
-  const [artist, setArtist] = useState("artist");
+  const [artist, setArtist] = useState("Ankush Roy");
   const [img, setImg] = useState("https://svgshare.com/i/10xc.svg");
 
   const [durationmin, setDurationmint] = useState("00");
@@ -78,6 +78,7 @@ const playSong = () => {
       const data = await response.json();
       console.log(data.songs);
       setTracks(data.songs);
+
     };
  
     if (params) getAlbumDetails();
@@ -105,6 +106,7 @@ const playSong = () => {
           ],
           // img_src: LazarusImg,
           // src: Lazarus,
+          //hash: 'QmWymKE9
         },
         {
           name: "Yosemite",
@@ -328,7 +330,7 @@ const playSong = () => {
   //     }
 
   // // };
-  // const cid=
+  // setCid("QmU33wFUNwk9zFeBHnNURsQUqFecrs3eHFdLNo4moPzdQK");
 
   const updateProgress = () => {
     if (audioRef.current) {
@@ -452,9 +454,9 @@ const playSong = () => {
                   <IconContext.Provider value={{ style: { fontSize: "20px" } }}>
                     {/* <FaPlay /> */}
                     <audio ref={audioRef} controls style={{ display: "none" }}>
-                  
-                      setSrc(newsrc);
-                       <source src={src} type="audio/mp3" /> 
+                     {/* newSrc=`https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/${cid}`;
+                      setSrc(newsrc); */}
+                       <source src={`https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/QmQ18XbaRNVPhGtgccg1pYnqiSZWDZSi2LYGqMrXff7Nko`} type="audio/mp3" /> 
                       {/* <source src={src} type="audio/mp3" /> */}
                     </audio>
 

@@ -73,7 +73,7 @@ const SideBar = () => {
               }}
             />
             <ItemInfo>
-              <Info1>Daily Mix 1</Info1>
+              <Info1>Bengali</Info1>
               <Info2>Playlist • Made by ChainTune</Info2>
             </ItemInfo>
           </ListItem>
@@ -90,7 +90,7 @@ const SideBar = () => {
               }}
             />
             <ItemInfo>
-              <Info1>Daily Mix 2</Info1>
+              <Info1>Indie Pop</Info1>
               <Info2>Playlist • Made by ChainTune</Info2>
             </ItemInfo>
           </ListItem>
@@ -107,7 +107,7 @@ const SideBar = () => {
               }}
             />
             <ItemInfo>
-              <Info1>Daily Mix 3</Info1>
+              <Info1>After Drinks</Info1>
               <Info2>Playlist • Made by ChainTune</Info2>
             </ItemInfo>
           </ListItem>
@@ -124,7 +124,7 @@ const SideBar = () => {
               }}
             />
             <ItemInfo>
-              <Info1>Daily Mix 4</Info1>
+              <Info1>GYM PLaylist</Info1>
               <Info2>Playlist • Made by ChainTune</Info2>
             </ItemInfo>
           </ListItem>
@@ -141,7 +141,7 @@ const SideBar = () => {
               }}
             />
             <ItemInfo>
-              <Info1>Daily Mix 5</Info1>
+              <Info1>Jpop</Info1>
               <Info2>Playlist • Made by ChainTune</Info2>
             </ItemInfo>
           </ListItem>
@@ -158,7 +158,7 @@ const SideBar = () => {
               }}
             />
             <ItemInfo>
-              <Info1>Daily Mix 6</Info1>
+              <Info1>Daily Mix</Info1>
               <Info2>Playlist • Made by ChainTune</Info2>
             </ItemInfo>
           </ListItem>

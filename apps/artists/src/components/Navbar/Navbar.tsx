@@ -18,7 +18,7 @@ const Navbar = () => {
     router.push("/stake");
   };
   const profileCid = localStorage.getItem("profileCid");
-const imageUrl = `https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/${profileCid}`;
+const imageUrl = `https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/Qme7hgq7UhGrdWuvAXZiuAkFtBWa5rXELQNZECuDePQiDQ`;
 
   return (
     <div className="flex bg-zinc-950 py-[1.5vw] px-[1.5vw] fixed z-10 flex-row justify-between w-full items-center">
