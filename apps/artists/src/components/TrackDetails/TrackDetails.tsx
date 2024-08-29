@@ -54,6 +54,7 @@ const provider = new Provider(Network.DEVNET);
 
 const moduleAddress =
   "0x41c77f139fc81c6991b7e41954e9b19614a7f2180f8b332ff21b658fac050ef7";
+  const mintingmoduleAddress = "0x6cc3715231ae4482e8a77095d1c11bc9954f65d8b9476de87abf61624d2d216c";
 
 const TrackDetails: React.FC<TrackDetailsProps> = (props) => {
   // const navigate = useNavigate();
@@ -387,7 +388,6 @@ const TrackDetails: React.FC<TrackDetailsProps> = (props) => {
         );
 
         console.log(resFile.data);
-        return resFile.data.IpfsHash;
         if (type === "SongAudio") {
           setaudioCid(resFile.data.IpfsHash);
         } else if (type === "SongImage") {
@@ -395,6 +395,8 @@ const TrackDetails: React.FC<TrackDetailsProps> = (props) => {
         } else if (type === "AlbumImage") {
           setAlbumImageCid(resFile.data.IpfsHash);
         }
+        return resFile.data.IpfsHash;
+       
       } catch (error) {
         console.log("Error: ", error);
       }
