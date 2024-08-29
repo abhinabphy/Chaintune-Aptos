@@ -76,25 +76,25 @@ const playSong = () => {
     // 	artist: 'Jon Bellion',
 
     // },
-    {
-      name: "Lazarus",
-      animation_url:
-        "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt",
-      image: "https://svgshare.com/i/10xH.svg",
-      attributes: [
-        {
-          trait_type: "Genre",
-          value: "Pop",
-        },
-        {
-          trait_type: "Artist",
-          value: "Dave",
-        },
-      ],
-      // img_src: LazarusImg,
-      // src: Lazarus,
-      //hash: 'QmWymKE9
-    },
+    // {
+    //   name: "Lazarus",
+    //   animation_url:
+    //     "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt",
+    //   image: "https://svgshare.com/i/10xH.svg",
+    //   attributes: [
+    //     {
+    //       trait_type: "Genre",
+    //       value: "Pop",
+    //     },
+    //     {
+    //       trait_type: "Artist",
+    //       value: "Dave",
+    //     },
+    //   ],
+    //   // img_src: LazarusImg,
+    //   // src: Lazarus,
+    //   //hash: 'QmWymKE9
+    // },
     {
       name: "Yosemite",
       // img_src: YosemiteImg,
@@ -147,6 +147,109 @@ const playSong = () => {
       ],
       // img_src: LazarusImg,
       // src: Lazarus,
+    },
+    {
+      name: "Lazarus",
+      animation_url:
+        "https://green-recent-centipede-889.mypinata.cloud/ipfs/QmdpaGcsus4kjo2CoGsAryEANvScM8NGNJWV5shX9kGew3?pinataGatewayToken=k9Uh0sEkauw4Ftiab1wtXgWgeKnRdgnmUxFvKGKyCtGvWT9Bhc7REDRE_ShxXw-o",
+      image: "https://svgshare.com/i/10xH.svg",
+      attributes: [
+        {
+          trait_type: "Genre",
+          value: "Pop",
+        },
+        {
+          trait_type: "Artist",
+          value: "Dave",
+        },
+      ],
+      // img_src: LazarusImg,
+      // src: Lazarus,
+    },
+    {
+      name: "Dark paradise",
+      // img_src: AudioImg,
+      animation_url:
+        "https://green-recent-centipede-889.mypinata.cloud/ipfs/QmZkRcGL1rJjtsCuc5ZhwrknREHoMwa7nzTYf4nHfAZPb5?pinataGatewayToken=k9Uh0sEkauw4Ftiab1wtXgWgeKnRdgnmUxFvKGKyCtGvWT9Bhc7REDRE_ShxXw-o",
+      image: "https://svgshare.com/i/10xc.svg",
+      attributes: [
+        {
+          trait_type: "Genre",
+          value: "Pop",
+        },
+        {
+          trait_type: "Artist",
+          value: "Lana del ray",
+        },
+      ],
+    },
+    {
+      name: "Dark paradise",
+      // img_src: AudioImg,
+      animation_url:
+        "https://green-recent-centipede-889.mypinata.cloud/ipfs/QmPb8aCZqkn43DR8QViUqT35Z8eMsksQNhA7gh9wARJHct?pinataGatewayToken=k9Uh0sEkauw4Ftiab1wtXgWgeKnRdgnmUxFvKGKyCtGvWT9Bhc7REDRE_ShxXw-o",
+      image: "https://svgshare.com/i/10xH.svg",
+      attributes: [
+        {
+          trait_type: "Genre",
+          value: "Pop",
+        },
+        {
+          trait_type: "Artist",
+          value: "Lana del ray",
+        },
+      ],
+    },
+    {
+      name: "Dark paradise",
+      // img_src: AudioImg,
+      animation_url:
+        "https://ipfs.io/ipfs/Qmd2j7ZFWFW7je66XMUwNU5z4TruVNcNsx3Hqv7LeFpHjc",
+      image: "https://svgshare.com/i/10xc.svg",
+      attributes: [
+        {
+          trait_type: "Genre",
+          value: "Pop",
+        },
+        {
+          trait_type: "Artist",
+          value: "Lana del ray",
+        },
+      ],
+    },
+    {
+      name: "Dark paradise",
+      // img_src: AudioImg,
+      animation_url:
+        "https://ipfs.io/ipfs/Qmd2j7ZFWFW7je66XMUwNU5z4TruVNcNsx3Hqv7LeFpHjc",
+      image: "https://svgshare.com/i/10xc.svg",
+      attributes: [
+        {
+          trait_type: "Genre",
+          value: "Pop",
+        },
+        {
+          trait_type: "Artist",
+          value: "Lana del ray",
+        },
+      ],
+    },
+    {
+      name: "Dark paradise",
+      // img_src: AudioImg,
+      animation_url:
+        "https://ipfs.io/ipfs/Qmd2j7ZFWFW7je66XMUwNU5z4TruVNcNsx3Hqv7LeFpHjc",
+      image: "https://svgshare.com/i/10xc.svg",
+      attributes: [
+        {
+          trait_type: "Genre",
+          value: "Pop",
+        },
+        {
+          trait_type: "Artist",
+          value: "Lana del ray",
+        },
+      ],
     },
     {
       name: "Dark paradise",
@@ -206,6 +309,44 @@ const playSong = () => {
           //hash: 'QmWymKE9
         },
         {
+          name: "Lazarus",
+          animation_url:
+            "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt",
+          image: "https://svgshare.com/i/10xH.svg",
+          attributes: [
+            {
+              trait_type: "Genre",
+              value: "Pop",
+            },
+            {
+              trait_type: "Artist",
+              value: "Dave",
+            },
+          ],
+          // img_src: LazarusImg,
+          // src: Lazarus,
+          //hash: 'QmWymKE9
+        },
+        {
+          name: "Lazarus",
+          animation_url:
+            "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt",
+          image: "https://svgshare.com/i/10xH.svg",
+          attributes: [
+            {
+              trait_type: "Genre",
+              value: "Pop",
+            },
+            {
+              trait_type: "Artist",
+              value: "Dave",
+            },
+          ],
+          // img_src: LazarusImg,
+          // src: Lazarus,
+          //hash: 'QmWymKE9
+        },
+        {
           name: "Yosemite",
           // img_src: YosemiteImg,
           animation_url:
@@ -239,6 +380,60 @@ const playSong = () => {
               value: "Lana del ray",
             },
           ],
+        },
+        {
+          name: "Lazarus",
+          animation_url:
+            "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt",
+          image: "https://svgshare.com/i/10xH.svg",
+          attributes: [
+            {
+              trait_type: "Genre",
+              value: "Pop",
+            },
+            {
+              trait_type: "Artist",
+              value: "Dave",
+            },
+          ],
+          // img_src: LazarusImg,
+          // src: Lazarus,
+        },
+        {
+          name: "Lazarus",
+          animation_url:
+            "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt",
+          image: "https://svgshare.com/i/10xH.svg",
+          attributes: [
+            {
+              trait_type: "Genre",
+              value: "Pop",
+            },
+            {
+              trait_type: "Artist",
+              value: "Dave",
+            },
+          ],
+          // img_src: LazarusImg,
+          // src: Lazarus,
+        },
+        {
+          name: "Lazarus",
+          animation_url:
+            "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt",
+          image: "https://svgshare.com/i/10xH.svg",
+          attributes: [
+            {
+              trait_type: "Genre",
+              value: "Pop",
+            },
+            {
+              trait_type: "Artist",
+              value: "Dave",
+            },
+          ],
+          // img_src: LazarusImg,
+          // src: Lazarus,
         },
         {
           name: "Lazarus",
