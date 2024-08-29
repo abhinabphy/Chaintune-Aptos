@@ -64,7 +64,7 @@ const PlaylistTable = () => {
                                     aria-hidden="true"
                                     fill="currentColor"
                                     viewBox="0 0 20 20"
-                                    xmlns="http://www.w3.org/2000/svg"
+                                    xmlns="https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg"
                                 >
                                     <path
                                         fillRule="evenodd"
@@ -151,8 +151,8 @@ const PlaylistTable = () => {
                                         alt="Jese image"
                                     />
                                     <div className="pl-3">
-                                        <Title>Feel It Still</Title>
-                                        <Subtitle>Portugal. The Man</Subtitle>
+                                        <Title>Kola Veri Di</Title>
+                                        <Subtitle>Chaintune Special</Subtitle>
                                     </div>
                                 </div>
                             </TableCell>
@@ -163,7 +163,7 @@ const PlaylistTable = () => {
                                 <div className="flex items-center">2 days ago</div>
                             </TableCell>
                             <TableCell>
-                                2:43
+                                3:01
                             </TableCell>
                         </TableRow>
                         <TableRow>

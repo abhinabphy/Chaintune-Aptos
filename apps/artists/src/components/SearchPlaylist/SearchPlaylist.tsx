@@ -91,10 +91,10 @@ const VotingCard = ({handleSearchClose}:any) => {
                     </SearchText2>
                 </InfoBlock>
             </Row>
-            <SearchEntry sno="01" title="Feel it Still" artist="Portugal, The Men" album="Woodstock" updatedAt='2 Days Ago' duration='2:43' />
-            <SearchEntry sno="01" title="Feel it Still" artist="Portugal, The Men" album="Woodstock" updatedAt='2 Days Ago' duration='2:43' />
-            <SearchEntry sno="01" title="Feel it Still" artist="Portugal, The Men" album="Woodstock" updatedAt='2 Days Ago' duration='2:43' />
-            <SearchEntry sno="01" title="Feel it Still" artist="Portugal, The Men" album="Woodstock" updatedAt='2 Days Ago' duration='2:43' />
+            <SearchEntry sno="01" title="Kola Veri Di" artist="Anirudh Ravichandra" album="Chaintune Special" updatedAt='2 Mins Ago ' duration='3:01' />
+            <SearchEntry sno="02" title="Cute Volume 1" artist="Honey Singh" album="Chaintune Special" updatedAt='2 Mins Ago' duration='4:11' />
+            <SearchEntry sno="03" title="Ghar Bana Lia" artist="Apporv Shrivastava" album="Chaintune Special" updatedAt='2 Mins Ago' duration='4:08' />
+            <SearchEntry sno="04" title="Samjho Na" artist="Aditya Rikhari" album="Chaintune Special" updatedAt='2 Mins Ago' duration='3:50' />
         </CardContainer2>
     )
 }

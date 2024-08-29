@@ -181,7 +181,7 @@ const MintNft =()=>{
                     </div>
                     <div>
                         <p style={{fontSize:`14px`,color:`white`, opacity:`0.6`}}>Gas Fee</p>
-                        <p style={{fontSize:`24px`,color:`white`}}>CHT 0.2345</p>
+                        <p style={{fontSize:`24px`,color:`white`}}>APT 0.0008</p>
                     </div>
                 </div>
                 <div style={{width:`fit-content`, height:`44px`, display:`flex`, justifyContent:`center`, alignItems:`center`, padding:`12px 32px`, borderRadius:`24px`,backgroundColor:`rgba(255, 255, 255, 0.10)`}}>
