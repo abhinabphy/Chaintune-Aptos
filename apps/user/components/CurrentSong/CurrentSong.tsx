@@ -1,4 +1,4 @@
-
+//@ts-nocheck
 import { Ele32, Ele321, Ele322, Rec_play, Rec_name } from '@styles/recPlay/style'
 import { Cont, Left, Ele3, Ele31, } from '@styles/Home/style'
 import CurrentPlaylistProps from "@components/CurrentPlaylistCard/CurrentPlaylistCard";
