@@ -19,7 +19,7 @@ import { Network, Provider } from "aptos";
 import { min } from "date-fns";
 
 const mintingModuleAddress =
-  "0x28aa30842a262ce44a3734fd8b8b2e3238fc574970ce5bce384e1510a9f85f2b";
+  "0x4b383fdf80ded703071394131c88aeac3c6c72ca7f570e24aabc335ff7be1bfa";
 const moduleAddress = `0xa715798c513b5af39165b04969c3c502fedc5da1dd3b64cbfc68573368ba3c9b`;
 const provider = new Provider(Network.DEVNET);
 

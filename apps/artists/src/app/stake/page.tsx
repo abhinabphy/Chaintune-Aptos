@@ -163,7 +163,11 @@ const Staking_page = () => {
            
           )}
         </div>
-        <a href="/convert" className="text-lg font-['Aileron'] leading-[20px] pb-4 text-white">Convert to Aptos</a>
+        <div className="w-[35vw] border-solid border-white backdrop-blur-[24px] bg-black flex flex-row justify-center pt-3 h-12 items-start border rounded-[24px]">
+  <a href="/convert" className="text-lg font-['Aileron'] leading-[20px] pb-4 text-white">
+    Convert to Aptos
+  </a>
+</div>
 
       </div>
     </div>

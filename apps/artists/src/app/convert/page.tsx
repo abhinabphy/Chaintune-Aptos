@@ -43,10 +43,10 @@
 // export default Widget;
 'use client'; // Ensure this component is treated as a Client Component
 import { memo } from "react";
-import  {PanoraWidget}  from "@panoraexchange/widget-sdk";
+import  PanoraWidget from "@panoraexchange/widget-sdk";
 
 const PANORA_WIDGET_API_KEY =
-  process.env.NEXT_PUBLIC_PANORA_WIDGET_API_KEY ?? "";
+  process.env.NEXT_PUBLIC_PANORA_WIDGET_API_KEY ?? "oLujOsvnXgFY9TjN5VxS@u@kmq+wWjcyTEnVL4LEPf5pwNtYdR90EfeBDj33F^4E";
 
 const Widget = () => (
   <div

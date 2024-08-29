@@ -27,6 +27,7 @@ import axios from "axios";
 import Confetti from "react-confetti";
 import { useNavigate } from "react-router-dom";
 import { Network, Provider } from "aptos";
+import {useRouter} from "next/navigation";
 
 import { useWindowSize } from "@uidotdev/usehooks";
 // const wallet
@@ -53,7 +54,7 @@ interface TrackDetailsProps {
 const provider = new Provider(Network.DEVNET);
 
 const moduleAddress =
-  "0x41c77f139fc81c6991b7e41954e9b19614a7f2180f8b332ff21b658fac050ef7";
+  "0x4b383fdf80ded703071394131c88aeac3c6c72ca7f570e24aabc335ff7be1bfa";
   const mintingmoduleAddress = "0x6cc3715231ae4482e8a77095d1c11bc9954f65d8b9476de87abf61624d2d216c";
 
 const TrackDetails: React.FC<TrackDetailsProps> = (props) => {
@@ -159,10 +160,10 @@ const TrackDetails: React.FC<TrackDetailsProps> = (props) => {
 
     const textEncoder = new TextEncoder();
 
-    const song_cid = textEncoder.encode(`ipfs://${cid}`);
+    const song_cid = textEncoder.encode(`${cid}`);
     const song_Name = textEncoder.encode(songName);
-    const audio_cid = textEncoder.encode(`ipfs://${song_audio_cid}`);
-    const image_cid = textEncoder.encode(`ipfs://${song_image_cid}`);
+    const audio_cid = textEncoder.encode(`${song_audio_cid}`);
+    const image_cid = textEncoder.encode(`${song_image_cid}`);
     const album = textEncoder.encode(Album);
     const description = textEncoder.encode(desc);
 
@@ -178,7 +179,7 @@ const TrackDetails: React.FC<TrackDetailsProps> = (props) => {
         amount,
         price,
       ],
-      function: `${moduleAddress}::MarketPlace::mint_and_list_token`,
+      function: `${moduleAddress}::Marketplace::mint_and_list_token`,
       type: "entry_function_payload",
       type_arguments: [],
     };
@@ -219,13 +220,13 @@ const TrackDetails: React.FC<TrackDetailsProps> = (props) => {
 
     const textEncoder = new TextEncoder();
 
-    const c_id = textEncoder.encode(`https://ipfs.io/ipfs/${cid}`);
+    const c_id = textEncoder.encode(`${cid}`);
     const desc = textEncoder.encode(description);
     const album = textEncoder.encode(Album);
 
     const payload = {
       arguments: [album, c_id, desc, max_sup],
-      function: `${moduleAddress}::MarketPlace::set_collection_details`,
+      function: `${moduleAddress}::Marketplace::set_collection_details`,
       type: "entry_function_payload",
       type_arguments: [],
     };
@@ -243,14 +244,27 @@ const TrackDetails: React.FC<TrackDetailsProps> = (props) => {
       console.error("Error creating collection:", error);
     }
   };
+  const router= useRouter();
 
-  const handleSingleSongSubmit = (event: React.FormEvent) => {
+  const handleSingleSongSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     if (song && musicCoverFile) {
-      handleUploadToIPFS(song, "SongAudio");
-      handleUploadToIPFS(musicCoverFile, "SongImage");
+     const song_cid= await handleUploadToIPFS(song, "SongAudio");
+     const image_cid= await handleUploadToIPFS(musicCoverFile, "SongImage");
+      // console.log(trackName);
+      // console.log(musicDescription);
+      // console.log(primaryGenre);
+      // console.log(primaryLanguage);
+      // console.log(featuredArtists);
+      // console.log(isrc);
+      // console.log(writtenBy);
+      // console.log(explicitLyrics);
       alert("Song Uploaded");
-      // window.location.replace("http://localhost:3000/manageRelease");
+      await createCollection(image_cid, trackName, musicDescription, 25);
+      await publishSong(1, 0, image_cid, trackName, albumName, musicDescription, image_cid, song_cid, 25);
+      router.push('/previewRelease'); // Navigate to previewRelease page
+
+      
     }
     setTrackName("");
     setMusicDescription("");
