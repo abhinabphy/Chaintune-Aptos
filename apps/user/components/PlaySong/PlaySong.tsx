@@ -50,7 +50,7 @@ import { useParams } from "next/navigation";
 
 const playSong = () => {
   const [cid, setCid] = useState<string | null>(null);
-  const [isPlaying, setIsPlaying] = useState<boolean>(false);
+  const [isPlaying, setIsPlaying] = useState<boolean>(true);
   const audioRef = useRef<HTMLAudioElement>(null);
   const [progress, setProgress] = useState(0);
   const [volvalue, setvolvalue] = useState(0);
@@ -64,11 +64,108 @@ const playSong = () => {
   );
   const [artist, setArtist] = useState("Ankush Roy");
   const [img, setImg] = useState("https://svgshare.com/i/10xc.svg");
+  const[aud,setAud]=useState("https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/QmQ18XbaRNVPhGtgccg1pYnqiSZWDZSi2LYGqMrXff7Nko")
 
   const [durationmin, setDurationmint] = useState("00");
   const [durationsecond, setDurationsecond] = useState("00");
 
   const [tracks, setTracks] = useState<any[]>([]);
+  const track1=[
+    // {
+    // 	title: 'Eyes to the sky',
+    // 	artist: 'Jon Bellion',
+
+    // },
+    {
+      name: "Lazarus",
+      animation_url:
+        "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt",
+      image: "https://svgshare.com/i/10xH.svg",
+      attributes: [
+        {
+          trait_type: "Genre",
+          value: "Pop",
+        },
+        {
+          trait_type: "Artist",
+          value: "Dave",
+        },
+      ],
+      // img_src: LazarusImg,
+      // src: Lazarus,
+      //hash: 'QmWymKE9
+    },
+    {
+      name: "Yosemite",
+      // img_src: YosemiteImg,
+      animation_url:
+        "https://ipfs.io/ipfs/QmbLTnRRGJmuiBy1QkD849C6QuqWUJ6vD8bVpZTM7EW8po",
+      image: "https://svgshare.com/i/10ww.svg",
+      attributes: [
+        {
+          trait_type: "Genre",
+          value: "Pop",
+        },
+        {
+          trait_type: "Artist",
+          value: "Travis scott",
+        },
+      ],
+    },
+
+    {
+      name: "Dark paradise",
+      // img_src: AudioImg,
+      animation_url:
+        "https://ipfs.io/ipfs/Qmd2j7ZFWFW7je66XMUwNU5z4TruVNcNsx3Hqv7LeFpHjc",
+      image: "https://svgshare.com/i/10xc.svg",
+      attributes: [
+        {
+          trait_type: "Genre",
+          value: "Pop",
+        },
+        {
+          trait_type: "Artist",
+          value: "Lana del ray",
+        },
+      ],
+    },
+    {
+      name: "Lazarus",
+      animation_url:
+        "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt",
+      image: "https://svgshare.com/i/10xH.svg",
+      attributes: [
+        {
+          trait_type: "Genre",
+          value: "Pop",
+        },
+        {
+          trait_type: "Artist",
+          value: "Dave",
+        },
+      ],
+      // img_src: LazarusImg,
+      // src: Lazarus,
+    },
+    {
+      name: "Dark paradise",
+      // img_src: AudioImg,
+      animation_url:
+        "https://ipfs.io/ipfs/Qmd2j7ZFWFW7je66XMUwNU5z4TruVNcNsx3Hqv7LeFpHjc",
+      image: "https://svgshare.com/i/10xc.svg",
+      attributes: [
+        {
+          trait_type: "Genre",
+          value: "Pop",
+        },
+        {
+          trait_type: "Artist",
+          value: "Lana del ray",
+        },
+      ],
+    },
+  ];
   const params = useParams();
 
   useEffect(() => {
@@ -213,20 +310,28 @@ const playSong = () => {
       setTrackIndex(0);
     }
   };
-
+useEffect(() => {
+  const id=localStorage.getItem("index");
+  console.log("id= ",id);
+  if(id){
+  setTrackIndex(parseInt(id));
+  }
+});
   useEffect(() => {
-    if (tracks.length > 0 && trackIndex < tracks.length) {
-      const t = tracks[trackIndex];
+    if (track1.length > 0 && trackIndex < track1.length) {
+      console.log("pt= ", trackIndex);
+      const t = track1[trackIndex];
       if (t) {
         const name = t.name;
         const source = t.animation_url;
         const Image = t.image;
         const author = t.attributes[1].value;
         setSrc(source);
+
         setTitle(name);
         setArtist(author);
         setImg(Image);
-
+        setAud(source);
         setIsPlaying(false);
         setProgress(0);
         setsec("00");
@@ -456,7 +561,8 @@ const playSong = () => {
                     <audio ref={audioRef} controls style={{ display: "none" }}>
                      {/* newSrc=`https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/${cid}`;
                       setSrc(newsrc); */}
-                       <source src={`https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/QmQ18XbaRNVPhGtgccg1pYnqiSZWDZSi2LYGqMrXff7Nko`} type="audio/mp3" /> 
+                      <source src={aud} type="audio/mp3" />
+                       {/* <source src={`https://tan-worldwide-macaw-428.mypinata.cloud/ipfs/QmQ18XbaRNVPhGtgccg1pYnqiSZWDZSi2LYGqMrXff7Nko`} type="audio/mp3" />  */}
                       {/* <source src={src} type="audio/mp3" /> */}
                     </audio>
 

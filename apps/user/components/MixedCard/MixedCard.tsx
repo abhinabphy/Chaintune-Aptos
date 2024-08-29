@@ -15,7 +15,7 @@ const MixedCard = ({id, artist, name, img}: t) => {
     <CardContainer key={id}>
       <CardImage src={img} alt='' />
       <CardInfo>
-        <Title>{name}</Title>
+        <Title>{name} 111</Title>
         <Description>
           {artist}
         </Description>

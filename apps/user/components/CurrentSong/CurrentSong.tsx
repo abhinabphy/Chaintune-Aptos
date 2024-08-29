@@ -7,7 +7,7 @@ import React from 'react'
 const playlistData = {
     title: 'My Awesome Playlist',
     author: {
-        title: 'John Doe',
+        title: 'John Doe 111',
         url: 'https://example.com/johndoe',
     },
     numSongs: 10,
@@ -50,16 +50,19 @@ const playlistItemData4 = {
 };
 
 const CurrentSong = () => {
+    function hc(data:any) {
+        console.log(data.index)
+    }
     return (
         <div>
             <Ele31 style={{ width: '70.5vw', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                 <Ele321>Currently Playing</Ele321>
                 <div style={{ width: '70.5vw', display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
                     <div style={{ width: '15vw' }}>   <CurrentPlaylistProps    {...playlistData} /></div>
-                    <Ele322 style={{ width: '45vw', height: '32vh' }}> <CurrentPlaylistItem {...playlistItemData1} />
-                        <CurrentPlaylistItem {...playlistItemData2} />
-                        <CurrentPlaylistItem {...playlistItemData3} />
-                        <CurrentPlaylistItem {...playlistItemData4} /></Ele322>
+                    <Ele322 style={{ width: '45vw', height: '32vh' }}> <CurrentPlaylistItem  {...playlistItemData1} />
+                        <CurrentPlaylistItem  {...playlistItemData2} />
+                        <CurrentPlaylistItem  {...playlistItemData3} />
+                        <CurrentPlaylistItem  {...playlistItemData4} /></Ele322>
                 </div>
 
 

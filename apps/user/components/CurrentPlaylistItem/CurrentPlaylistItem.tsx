@@ -21,8 +21,14 @@ export default function CurrentPlaylistItem({
   albumName,
   duration,
 }: CurrentPlaylistItemProps) {
+  function hc() {
+    console.log("clicked", index);
+    localStorage.setItem("index", index.toString());
+    window.location.reload();
+  }
   return (
-    <Wrapper>
+    
+    <Wrapper  style={{cursor:"pointer"}}onClick={hc}>
       <Details >
         <h1>{index}</h1>
         <img src={thumbnail} alt={"hello"} width={120} height={120} />
