@@ -114,11 +114,11 @@ const playSong = () => {
     },
 
     {
-      name: "Dark paradise",
+      name: "Kola Veri Di",
       // img_src: AudioImg,
       animation_url:
         "https://ipfs.io/ipfs/Qmd2j7ZFWFW7je66XMUwNU5z4TruVNcNsx3Hqv7LeFpHjc",
-      image: "https://svgshare.com/i/10xc.svg",
+      image: "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg",
       attributes: [
         {
           trait_type: "Genre",
@@ -126,15 +126,15 @@ const playSong = () => {
         },
         {
           trait_type: "Artist",
-          value: "Lana del ray",
+          value: "Anirudh Ravichandra",
         },
       ],
     },
     {
-      name: "Lazarus",
+      name: "Cute Volume 1",
       animation_url:
         "https://ipfs.io/ipfs/QmWymKE9W2TWbgaz7phUTyEHoRhaP3t39zw5dExH4MudLt",
-      image: "https://svgshare.com/i/10xH.svg",
+      image: "https://svgshare.com/i/111a.svg",
       attributes: [
         {
           trait_type: "Genre",
@@ -142,17 +142,17 @@ const playSong = () => {
         },
         {
           trait_type: "Artist",
-          value: "Dave",
+          value: "Honey Singh",
         },
       ],
       // img_src: LazarusImg,
       // src: Lazarus,
     },
     {
-      name: "Lazarus",
+      name: "Ghar Bana Lia",
       animation_url:
         "https://green-recent-centipede-889.mypinata.cloud/ipfs/QmdpaGcsus4kjo2CoGsAryEANvScM8NGNJWV5shX9kGew3?pinataGatewayToken=k9Uh0sEkauw4Ftiab1wtXgWgeKnRdgnmUxFvKGKyCtGvWT9Bhc7REDRE_ShxXw-o",
-      image: "https://svgshare.com/i/10xH.svg",
+      image: "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg",
       attributes: [
         {
           trait_type: "Genre",
@@ -160,18 +160,18 @@ const playSong = () => {
         },
         {
           trait_type: "Artist",
-          value: "Dave",
+          value: "Apporv Shrivastava",
         },
       ],
       // img_src: LazarusImg,
       // src: Lazarus,
     },
     {
-      name: "Dark paradise",
+      name: "Samjho Na",
       // img_src: AudioImg,
       animation_url:
         "https://green-recent-centipede-889.mypinata.cloud/ipfs/QmZkRcGL1rJjtsCuc5ZhwrknREHoMwa7nzTYf4nHfAZPb5?pinataGatewayToken=k9Uh0sEkauw4Ftiab1wtXgWgeKnRdgnmUxFvKGKyCtGvWT9Bhc7REDRE_ShxXw-o",
-      image: "https://svgshare.com/i/10xc.svg",
+      image: "https://svgshare.com/i/111R.svg",
       attributes: [
         {
           trait_type: "Genre",
@@ -179,16 +179,16 @@ const playSong = () => {
         },
         {
           trait_type: "Artist",
-          value: "Lana del ray",
+          value: "Aditya Rikhari",
         },
       ],
     },
     {
-      name: "Dark paradise",
+      name: "Kaafizyda",
       // img_src: AudioImg,
       animation_url:
         "https://green-recent-centipede-889.mypinata.cloud/ipfs/QmPb8aCZqkn43DR8QViUqT35Z8eMsksQNhA7gh9wARJHct?pinataGatewayToken=k9Uh0sEkauw4Ftiab1wtXgWgeKnRdgnmUxFvKGKyCtGvWT9Bhc7REDRE_ShxXw-o",
-      image: "https://svgshare.com/i/10xH.svg",
+      image: "https://svgshare.com/i/1113.svg",
       attributes: [
         {
           trait_type: "Genre",
@@ -196,7 +196,7 @@ const playSong = () => {
         },
         {
           trait_type: "Artist",
-          value: "Lana del ray",
+          value: "Nanku",
         },
       ],
     },

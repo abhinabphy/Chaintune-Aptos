@@ -48,7 +48,7 @@ const SongCard = () => {
                 </TopBar>
                 <SongText>
                     <h1>Nothing Happens</h1>
-                    <h2>Wallows • 2019 • 54 songs • 3 hr 18 min</h2>
+                    <h2>Chaintune • 2024 • 4 songs • 15 mins 10 secs </h2>
                 </SongText>
 
             </SongDetails>

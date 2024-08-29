@@ -51,7 +51,7 @@ const playlistItemData4 = {
 };
 const playlistItemData5 = {
     index: 5,
-    thumbnl: 'https://svgshare.com/i/10xH.svg',
+    thumbnail: 'https://svgshare.com/i/1113.svg',
     title: 'Kaafizyda',
     artists: ['Nanku'],
     albumName: 'This is Nanku',
